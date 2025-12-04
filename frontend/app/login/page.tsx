@@ -12,7 +12,7 @@ export default function AdminLogin() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleLogin = (e) => {
+  const handleLogin = (e:any) => {
     e.preventDefault();
 
     if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {

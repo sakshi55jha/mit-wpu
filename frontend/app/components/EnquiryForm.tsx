@@ -21,14 +21,14 @@ export default function EnquiryForm() {
         error: null 
     });
 
-    const handleChange = (e) => {
+    const handleChange = (e:any) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,
         });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e:any) => {
         e.preventDefault();
         setStatus({ loading: true, message: null, error: null });
 
@@ -43,14 +43,16 @@ export default function EnquiryForm() {
 
         } catch (error) {            
             let errorMessage = 'Could not connect to the server.';
-
+  //@ts-ignore
               if (error.response?.data?.errors?.[0]?.message) {
+                //@ts-ignore
         errorMessage = error.response.data.errors[0].message;
       }
 
             setStatus({ 
                 loading: false, 
                 message: null, 
+                //@ts-ignore
                 error: errorMessage 
             });
             console.error('Submission Error:', error);

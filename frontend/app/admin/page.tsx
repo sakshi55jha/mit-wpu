@@ -8,7 +8,7 @@ const API_URL = "https://mit-wpu.onrender.com/form";
 
 export default function page() {
   const router = useRouter();
-  const [forms, setForms] = useState([]);
+const [forms, setForms] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -79,7 +79,7 @@ export default function page() {
 
         {!loading && forms.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {forms.map((item) => (
+            {forms.map((item:any) => (
               <div
                 key={item.id}
                 className="bg-white rounded-xl shadow-md p-6 border hover:shadow-lg transition"
