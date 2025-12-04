@@ -16,7 +16,6 @@ const FormSchema = z.object({
     phone: 
      z
         .preprocess(
-            // FIX: Using the correct anonymous function syntax here
             (a) => String(a).replace(/\D/g, ''),
             z.string()
              .length(10, { message: "Phone number must be exactly 10 digits." }) // Checks for exactly 10 characters
