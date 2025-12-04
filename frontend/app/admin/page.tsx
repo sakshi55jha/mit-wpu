@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/form";
+const API_URL = "https://mit-wpu.onrender.com/form";
 
 export default function page() {
   const router = useRouter();
