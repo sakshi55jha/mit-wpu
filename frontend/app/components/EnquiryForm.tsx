@@ -58,7 +58,7 @@ export default function EnquiryForm() {
         value={formData.name}
         onChange={handleChange}
         required
-        className="w-full border px-3 py-2 rounded"
+        className="w-full border px-3 py-2 rounded placeholder-gray-500"
       />
 
       <input
@@ -68,7 +68,7 @@ export default function EnquiryForm() {
         value={formData.email}
         onChange={handleChange}
         required
-        className="w-full border px-3 py-2 rounded placeholder-gray-500"
+        className="w-full border px-3 py-2 rounded placeholder-gray-500 "
       />
 
       <input
@@ -86,9 +86,9 @@ export default function EnquiryForm() {
         value={formData.course}
         onChange={handleChange}
         required
-        className="w-full border px-3 py-2 rounded placeholder-gray-500"
+        className="w-full border px-3 py-2 rounded placeholder-gray-500 "
       >
-        <option value="">Select Course *</option>
+        <option className="text-gray-500" value="">Select Course *</option>
         <option value="B.Tech">B.Tech</option>
         <option value="MBA">MBA</option>
         <option value="BBA">BBA</option>
