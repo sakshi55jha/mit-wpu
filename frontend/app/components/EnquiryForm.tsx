@@ -15,8 +15,8 @@ export default function EnquiryForm() {
 
   const [status, setStatus] = useState({
     loading: false,
-    message: null,
-    error: null,
+    message: "",
+    error: "",
   });
 
   const handleChange = (e:any) => {
@@ -28,21 +28,21 @@ export default function EnquiryForm() {
 
   const handleSubmit = async (e:any) => {
     e.preventDefault();
-    setStatus({ loading: true, message: null, error: null });
+    setStatus({ loading: true, message: "", error: "" });
 
     try {
       const response = await axios.post(API_URL, formData);
       setStatus({
         loading: false,
         message: response.data.message || "Submitted successfully!",
-        error: null,
+        error: "",
       });
 
       setFormData({ name: "", email: "", phone: "", course: "" });
     } catch (error:any) {
       setStatus({
         loading: false,
-        message: null,
+        message: "",
         error: "Submission failed. Try again.",
       });
     }
