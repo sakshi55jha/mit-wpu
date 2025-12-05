@@ -38,7 +38,7 @@ export default function AdminLogin() {
           placeholder="admin@gmail.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full border px-3 py-2 rounded"
+          className="w-full border px-3 py-2 rounded placeholder-gray-500"
           required
         />
 
@@ -51,7 +51,7 @@ export default function AdminLogin() {
           required
         />
 
-        <button className="w-full bg-black text-white py-2 rounded">
+        <button className="w-full bg-black text-white py-2 rounded placeholder-gray-500">
           Login
         </button>
       </form>
