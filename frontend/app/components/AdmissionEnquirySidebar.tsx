@@ -11,7 +11,7 @@ export default function AdmissionEnquirySidebar() {
       <button
         onClick={() => setOpen(!open)}
         className={`fixed top-[20%]
-       ${open ? "right-[85vw]" : "right-0"}
+       ${open ? "right-[80vw]" : "right-0"}
         md:${open ? "right-[380px]" : "right-0"}
         z-[9999]
         rotate-[-90deg]
@@ -45,7 +45,7 @@ export default function AdmissionEnquirySidebar() {
       )}
 
       <div
-        className={`fixed top-0 right-0 h-full  w-[85vw] md:w-[380px]
+        className={`fixed top-0 right-0 h-full  w-[80vw] md:w-[380px]
         bg-white shadow-2xl z-[9999]
         transform transition-transform duration-300
         ${open ? "translate-x-0" : "translate-x-full"}`}
